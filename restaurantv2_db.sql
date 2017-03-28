@@ -1,0 +1,45 @@
+-- CREATE TABLE restaurant (
+--   id serial primary key,
+--   name varchar,
+--   address varchar,
+--   category varchar
+-- );
+--
+-- CREATE TABLE reviewer (
+--   id serial primary key,
+--   name varchar,
+--   email varchar,
+--   karma integer DEFAULT 0 CHECK (karma <= 7)
+-- );
+--
+-- CREATE TABLE review (
+--   id serial primary key,
+--   reviewer_id integer REFERENCES reviewer (id),
+--   stars integer DEFAULT 1 CHECK (stars <= 5),
+--   title varchar,
+--   review varchar,
+--   restaurant_id integer REFERENCES restaurant (id)
+-- );
+
+-- insert into restaurant values
+--   (DEFAULT, 'Neighborhood Eat', '1819 Peachtree Rd NE Atlanta, GA 30309', 'Burgers'),
+--   (DEFAULT, 'South City Kitchen', '1144 Crescent Ave NE Atlanta, GA 30309', 'Southern'),
+--   (DEFAULT, 'Neighborhood Eat', '1819 Peachtree Rd NE Atlanta, GA 30309', 'Burgers'),
+--   (DEFAULT, 'One Rooster Mongolian Bar', '1016 Howell Mill Rd NW Atlanta, GA 30318', 'Asian Fusion')
+
+-- insert into reviewer values
+--   (DEFAULT, 'Goku', 'Goku@gmail.com', 5),
+--   (DEFAULT, 'Vegeta', 'Vegeta@yahoo.com', 2),
+--   (DEFAULT, 'Bulma', 'Bulma@hotmail.com', 6),
+--   (DEFAULT, 'Chichi', 'Chichi@geocities.com', 4),
+--   (DEFAULT, 'Yamcha', 'Yamcha@gmail.com', 3)
+
+-- insert into review (stars, title, review) values
+--   (4, 'Delicous!', 'The service at Neighborhood Eats was great.  The cashier was very friendly.'),
+--   (5, 'Scrumptious', 'Great, reasonably priced food cooked and served by awesome people - what else
+--                       do you need in a restaurant? The man gave me free chips and soup the first time
+--                       I came here because he said they were really good and I needed to try them.'),
+--   (5, 'Favorite place', 'My new favorite place - went for brunch and was totally blown away by the
+--                       artistry and delicious flavor of everything we tried.'),
+--   (2, 'Eh', 'Service was okay.  It seemed to take forever to get our biscuits.. and they didn''t come
+--                       over too often to ask us if we needed anything.')
